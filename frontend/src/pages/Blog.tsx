@@ -1,4 +1,3 @@
-import React from 'react'
 import { useBlog } from '../hooks'
 import { useParams } from 'react-router-dom'
 import BigBlog from '../components/BigBlog'
@@ -7,7 +6,7 @@ import AppBar from '../components/AppBar'
 function Blog() {
   const {id}=useParams()
   const{loading,blog}=useBlog({id:id || ""})
-  if(loading){
+  if(loading || !blog){
     return(
       <>
         <AppBar/>

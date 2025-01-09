@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react"
-import { data, Link,useNavigate } from "react-router-dom"
-import { SignUpInput,SignInInput } from "@rehneet-singh/blogger-common"
+import { Link,useNavigate } from "react-router-dom"
+import { SignUpInput} from "@rehneet-singh/blogger-common"
 import axios from "axios"
 import { BACKENDURL } from "../config"
 
@@ -22,7 +22,8 @@ function Auth({type}:{type:"signup"|"signin"}) {
       navigate("/blogs")
     }
     catch(e){
-      alert("Error while Signing Up")
+      alert("Error While Signing Up")
+      console.log(e)
     }
   }
 

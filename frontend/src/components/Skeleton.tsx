@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Skeleton() {
   return (
     <div className='bg-black flex justify-center'>
